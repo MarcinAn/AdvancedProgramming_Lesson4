@@ -1,7 +1,7 @@
 ﻿@page
 @{ var isLogin = "false";}
 @{
-    ViewData["Title"] = "Messages";
+    ViewData["Title"] = "Wiadomości";
 }
 @if (User.Identity.IsAuthenticated)
 {
@@ -12,11 +12,11 @@
 <div class="container">
     <div class="row">&nbsp;</div>
     <div class="row">
-        <div class="col-2">User</div>
+        <div class="col-2">Użytkownik</div>
         <div class="col-4"><input type="text" id="userInput" /></div>
     </div>
     <div class="row">
-        <div class="col-2">Message</div>
+        <div class="col-2">Wiadomość</div>
         <div class="col-4"><input type="text" id="messageInput" /></div>
     </div>
 
@@ -25,7 +25,7 @@
     <div class="row">&nbsp;</div>
     <div class="row">
         <div class="col-6">
-            <input type="button" id="sendButton" value="Send Message" />
+            <input type="button" id="sendButton" value="Wyślij wiadomość" />
         </div>
     </div>
 </div>
