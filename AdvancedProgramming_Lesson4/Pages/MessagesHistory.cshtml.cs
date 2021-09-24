@@ -23,7 +23,16 @@ namespace AdvancedProgramming_Lesson4.Pages
 
         public async Task OnGetAsync()
         {
-            Messages = await _context.Messages.ToListAsync();
+
+            IQueryable<Messages> isUserLogin = from s in _context.Messages
+                                             select s;
+
+            if (!String.IsNullOrEmpty("@"))
+            {
+                isUserLogin = isUserLogin.Where(s => s.IsLogin.Contains("@"));
+            }
+
+            Messages = await isUserLogin.AsNoTracking().ToListAsync();
         }
     }
 }

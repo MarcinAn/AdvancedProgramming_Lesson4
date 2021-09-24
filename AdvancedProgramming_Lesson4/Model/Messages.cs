@@ -15,7 +15,9 @@ namespace AdvancedProgramming_Lesson4.Model
             IsLogin = isLogin;
         }
 
+        
         public int Id { get; set; }
+
         public string User { get; set; }
         public string Message { get; set; }
         public string IsLogin { get; set; }
