@@ -2,7 +2,7 @@
 
 namespace AdvancedProgramming_Lesson4.Data.Migrations
 {
-    public partial class Message : Migration
+    public partial class Messages : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
